@@ -21,9 +21,7 @@ function getArrayParams(arr) {
     } 
   }
 
-  avg = sum / arr.length;
-  avg = avg.toFixed(2);
-  avg = +avg;
+  avg = +(sum / arr.length).toFixed(2);
 
   return { min: min, max: max, avg: avg };
 }
@@ -41,15 +39,7 @@ function makeWork(arrOfArr, func) {
       console.log('Сумма массива меньше предыдущей')
     }
   }
-
-  // for (i = 0; i < arrOfArr.length; i++) {
-  //   if (func(arrOfArr) > max) {
-  //     max += func(arrOfArr[i]);
-  //   } else {
-  //     console.log('Сумма массива меньше предыдущей')
-  //   }
-
-  
+   
   return max;
 }
 
@@ -59,11 +49,9 @@ function worker(arr) {
   return sum;
 }
 
+// Задание 3
 
-
-
-
-// // Задание 3
-// function worker2(arr) {
-//   // Ваш код
-// }
+function worker2(arr) {
+  let a = Math.abs(Math.max.apply(null, arr) - Math.min.apply(null, arr));
+  return a;
+}
