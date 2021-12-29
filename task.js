@@ -31,27 +31,22 @@ function getArrayParams(arr) {
 function makeWork(arrOfArr, func) {
   let max = 0;
 
-  for (let key of arrOfArr) { // пребор элементов массива
+  for (let key of arrOfArr) {
     let result = func(key);
     if (result > max) {
       max = result;
-    } else {
-      console.log('Сумма массива меньше предыдущей')
-    }
+    };
   }
-   
+
   return max;
 }
 
 function worker(arr) {
-  let sum = arr.reduce((sum, current) => sum + current, 0);
-  
-  return sum;
+  return arr.reduce((sum, current) => sum + current, 0);
 }
 
 // Задание 3
 
 function worker2(arr) {
-  let a = Math.abs(Math.max.apply(null, arr) - Math.min.apply(null, arr));
-  return a;
+  return Math.abs(Math.max.apply(null, arr) - Math.min.apply(null, arr));  
 }
