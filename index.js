@@ -1,4 +1,3 @@
-// Задание 1
 function getArrayParams(arr) {
   let min, max, sum, avg;
   min = Infinity;
@@ -26,8 +25,6 @@ function getArrayParams(arr) {
   return { min: min, max: max, avg: avg };
 }
 
-// Задание 2
-
 function makeWork(arrOfArr, func) {
   let max = 0;
 
@@ -45,7 +42,6 @@ function worker(arr) {
   return arr.reduce((sum, current) => sum + current, 0);
 }
 
-// Задание 3
 
 function worker2(arr) {
   return Math.abs(Math.max.apply(null, arr) - Math.min.apply(null, arr));  
